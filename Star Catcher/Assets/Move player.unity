@@ -181,11 +181,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2266b10ed0a0414fa76fd56605fb463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 10.1
+  Speed: 9.32
   gravity: 2.64
   jumpSpeed: 50
   jumpCount: 2
   jumpCountMax: 1
+  slideDuration: 44
+  slideTime: 0.01
 --- !u!33 &69224978
 MeshFilter:
   m_ObjectHideFlags: 0
