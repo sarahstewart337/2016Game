@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Move player.unity
+- path: Assets/Delegates/Delegates.unity
   isLoaded: 1
   isActive: 1
