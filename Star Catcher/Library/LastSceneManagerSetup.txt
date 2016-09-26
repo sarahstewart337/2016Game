@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/recyclewithassets.unity
+- path: Assets/redo on move recycle.unity
   isLoaded: 1
   isActive: 1
