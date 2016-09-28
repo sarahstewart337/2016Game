@@ -6,6 +6,7 @@ public class RecycleLvl : MonoBehaviour
 {
     private Vector3 movePos;
 
+
     private List<SendToRecycler> recycleList;
     void SendThisHandler (SendToRecycler _r)
     {
@@ -24,8 +25,11 @@ public class RecycleLvl : MonoBehaviour
 
     void OnTriggerEnter()
     {
+        int i = UnityEngine.Random.Range(0, recycleList.Count - 1);
+
         movePos.x = statics.nextPosition;
-        recycleList[0].transform.position = movePos;
+        recycleList[i].transform.position = movePos;
+        recycleList.RemoveAt(i);
         statics.nextPosition += statics.distance;
     }
 	

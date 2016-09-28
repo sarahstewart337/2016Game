@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Sprint1Prototype.unity
+- path: Assets/redo on move recycle.unity
   isLoaded: 1
   isActive: 1
