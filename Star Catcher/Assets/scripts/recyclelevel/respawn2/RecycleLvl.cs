@@ -7,7 +7,7 @@ public class RecycleLvl : MonoBehaviour
     private Vector3 movePos;
 
 
-    private List<SendToRecycler> recycleList;
+    public List<SendToRecycler> recycleList;
     void SendThisHandler (SendToRecycler _r)
     {
         recycleList.Add(_r);
