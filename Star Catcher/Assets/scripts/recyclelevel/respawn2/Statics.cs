@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿eusing UnityEngine;
 using System.Collections;
 
 public class Statics : MonoBehaviour {
