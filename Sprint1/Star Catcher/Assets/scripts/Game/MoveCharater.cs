@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class MoveCharater : MonoBehaviour
 {
+    private int count;
+    public Text Score;
     
         // this is the character controller component
-    private CharacterController myCC;
+    public CharacterController myCC;
     //temp var of data type vector3 to move the character
     private Vector3 tempPos;
     //speed of temp car in x
@@ -47,8 +50,11 @@ public class MoveCharater : MonoBehaviour
     {
         //This "Finds" the charaacter controller component
         myCC = GetComponent<CharacterController>();
-	
-	}
+        count = 0;
+        SetCountCountText();
+
+
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -88,4 +94,18 @@ public class MoveCharater : MonoBehaviour
         //moves the character controller at an even pace
         myCC.Move(tempPos * Time.deltaTime);
 	}
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("star"))
+        {
+            Destroy(other.gameObject);
+            count = count + 1;
+            SetCountCountText();
+        }
+    }
+    void SetCountCountText ()
+    {
+        Score.text = "Score: " + count.ToString();
+    }
 }
+
