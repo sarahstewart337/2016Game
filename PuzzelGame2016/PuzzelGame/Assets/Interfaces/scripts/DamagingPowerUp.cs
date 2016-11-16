@@ -2,7 +2,7 @@
 using System.Collections;
 using System;
 
-public class DamagingPowerUp : MonoBehaviour, IDamage {
+public class DamagingPowerUp : MonoBehaviour, IDamage { 
     public void Damage()
     {
         
