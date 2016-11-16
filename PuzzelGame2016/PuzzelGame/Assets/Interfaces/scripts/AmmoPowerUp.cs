@@ -29,6 +29,11 @@ public class AmmoPowerUp : MonoBehaviour, IPowerUp,IAddPoints {
         }
     }
 
+    public void OnTriggerenter()
+    {
+        throw new NotImplementedException();
+    }
+
     public void OnTriggerEnter()
     {
         throw new NotImplementedException();
@@ -46,4 +51,4 @@ public class AmmoPowerUp : MonoBehaviour, IPowerUp,IAddPoints {
 
 	
 	}
-}
+
