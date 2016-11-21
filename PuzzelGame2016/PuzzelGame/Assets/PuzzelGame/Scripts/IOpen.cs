@@ -1,15 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class IOpen : MonoBehaviour {
+public interface IOpen
+{
+    
+  
+    void Start();
+  
+    void OnTriggerEnter();
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }
