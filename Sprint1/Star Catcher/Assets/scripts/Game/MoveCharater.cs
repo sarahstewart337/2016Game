@@ -20,6 +20,9 @@ public class MoveCharater : MonoBehaviour
     //Sliding vars
     public int slideDuration = 100;
     public float slideTime = 0.01f;
+
+    private bool crash = true;
+
     //Coroutine for Sliding Character
     IEnumerator Slide ()
     {
@@ -101,6 +104,20 @@ public class MoveCharater : MonoBehaviour
             Destroy(other.gameObject);
             count = count + 1;
             SetCountCountText();
+        }
+
+        if (other.gameObject.CompareTag("crash")&& crash)
+        {
+            count = count / 2;
+            SetCountCountText();
+            crash = false;
+        }
+    }
+    void OnTriggerExit (Collider other)
+    {
+        if (other.gameObject.CompareTag("crash")&& !crash)
+        {
+            crash = true;
         }
     }
     void SetCountCountText ()
