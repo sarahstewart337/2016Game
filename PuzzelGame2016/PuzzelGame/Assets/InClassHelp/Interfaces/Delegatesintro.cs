@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿/*using UnityEngine;
 using System;
 
 public class Delegatesintro : MonoBehaviour
@@ -11,7 +11,7 @@ public class Delegatesintro : MonoBehaviour
 	 public delegate string DelString();
 	 public static DelString EventString;
 
-	 public static func<string,string> EvtReturnArgs;
+	 public static func <string,string> EvtReturnArgs;
 
 	// Use this for initialization
 	void Start ()
@@ -31,3 +31,4 @@ public class Delegatesintro : MonoBehaviour
 	
 	}
 }
+*/
