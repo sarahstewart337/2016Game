@@ -3,11 +3,11 @@ using System.Collections;
 
 public class destroyStar : MonoBehaviour
  {
-    public int forceTime = 10;
+    public int forceTime = 150;
     public float forceDuration = 0.1f;
     private bool canAddForce = true;
     private Rigidbody rigid;
-    private float force;
+    private float force = 20;
     public float forceRange = 10;
     private Vector3 forceVector;
     private Vector3 torqueVector;
@@ -16,21 +16,38 @@ public class destroyStar : MonoBehaviour
     void Start()
     {
         rigid = GetComponent<Rigidbody>();
-        StartCoroutine(RunRandomForce());
+        force = Random.Range(-force, force);
+        //StartCoroutine(RunRandomForce());
     }
 
-    IEnumerator RunRandomForce()
+    /*IEnumerator RunRandomForce()
     {
-        force = Random.Range(-forceRange, forceRange);
+        force = -15000f;
         while (forceTime > 0)
         {
+            print("RUN");
             yield return new WaitForSeconds(forceDuration);
             forceVector.x = force;
-            torqueVector.z = force / force;
+            torqueVector.z = force;
             rigid.AddTorque(torqueVector);
             rigid.AddForce(forceVector);
             forceTime--;
         }
+    }*/
+
+    void Update()
+    {
+        //force = -15000f;
+        //while (forceTime > 0)
+        //{
+            print("RUN");
+            //yield return new WaitForSeconds(forceDuration);
+            forceVector.x = force;
+            torqueVector.z = force;
+            rigid.AddTorque(torqueVector);
+            rigid.AddForce(forceVector);
+            //forceTime--;
+        //}
     }
 
     public float endTime = 3;
