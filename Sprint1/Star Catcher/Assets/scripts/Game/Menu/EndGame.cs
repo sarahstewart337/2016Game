@@ -3,21 +3,42 @@ using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class EndGame : MonoBehaviour
-{
-    public Button menuText;
+public class EndGame : MonoBehaviour {
 
-    // Use this for initialization
+    public Button startText;
+    public Button quitText;
+    public Button restartText;
+
     void Start()
     {
-        menuText = menuText.GetComponent<Button>();
-
+        
+        startText = startText.GetComponent<Button> ();
+        quitText = quitText.GetComponent<Button> ();
+        restartText = restartText.GetComponent<Button> ();
     }
 
-    public void StartLevel()
+
+    public void RestartLevel()
     {
+        
         SceneManager.LoadScene(1);
     }
+
+    public void QuitLevel()
+    {
+        //SceneManager.LoadScene (0);
+        Application.Quit();
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene (0);
+    }
+
+    
+
+    
+
 }
 
 
