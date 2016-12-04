@@ -25,6 +25,7 @@ public class RecycleLvl : MonoBehaviour
 
     void OnTriggerEnter()
     {
+        
         int i = UnityEngine.Random.Range(0, recycleList.Count - 1);
 
         movePos.x = statics.nextPosition;

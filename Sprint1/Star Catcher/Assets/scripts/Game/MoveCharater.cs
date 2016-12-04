@@ -20,6 +20,9 @@ public class MoveCharater : MonoBehaviour
     //Sliding vars
     public int slideDuration = 100;
     public float slideTime = 0.01f;
+
+    private bool crash = true;
+
     //Coroutine for Sliding Character
     IEnumerator Slide ()
     {
@@ -88,7 +91,7 @@ public class MoveCharater : MonoBehaviour
        
 
         // adding the gravity var to the y position of the tempPos var
-        tempPos.y -= gravity;
+        tempPos.y -= gravity * Time.deltaTime;
         //adding the speed var to the tempPos var x value with the right and left arrow keys
         tempPos.x = Speed*Input.GetAxis("Horizontal");
         //moves the character controller at an even pace
@@ -101,6 +104,20 @@ public class MoveCharater : MonoBehaviour
             Destroy(other.gameObject);
             count = count + 1;
             SetCountCountText();
+        }
+
+        if (other.gameObject.CompareTag("crash")&& crash)
+        {
+            count = count / 2;
+            SetCountCountText();
+            crash = false;
+        }
+    }
+    void OnTriggerExit (Collider other)
+    {
+        if (other.gameObject.CompareTag("crash")&& !crash)
+        {
+            crash = true;
         }
     }
     void SetCountCountText ()
