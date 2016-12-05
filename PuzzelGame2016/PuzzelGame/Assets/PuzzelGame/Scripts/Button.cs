@@ -2,21 +2,21 @@
 using System.Collections;
 using System;
 
-public class Button : MonoBehaviour, IOpen {
+public class Button : MonoBehaviour{
 
-   
+	public Animator anim = null;
 
-    public void OnTriggerEnter()
+  
+
+    public void Start()
     {
-        print("open door");
-    }
-
-    void IOpen.Start()
-    {
-        throw new NotImplementedException();
+		anim = GetComponent<Animator> ();
     }
 
 
-	
+	public void OnTriggerEnter(Collider collider)
+	{
+		anim.SetBool ("isOpen", false);
+	}
 	
 }
