@@ -7,7 +7,7 @@ public class destroyStar : MonoBehaviour
     public float forceDuration = 0.1f;
     private bool canAddForce = true;
     private Rigidbody rigid;
-    private float force = 20;
+    private float force = 30;
     public float forceRange = 10;
     private Vector3 forceVector;
     private Vector3 torqueVector;
