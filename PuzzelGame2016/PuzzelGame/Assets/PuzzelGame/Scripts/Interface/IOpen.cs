@@ -5,7 +5,7 @@ public interface IOpen
 {
     
   
-    void Start();
+    
   
     void OnTriggerEnter();
 
