@@ -6,27 +6,14 @@ using System;
 public class Handler : MonoBehaviour
 {
     public GameObject player;
+    public static int i;
 
     void Start()
     {
-        DelegateStuff.DelegateAction += DelegateActHandler;
-        DelegateStuff.AnotherDel += AnotherDelHandler;
-        DelegateStuff.ThirdDel += ThirdDelHandler;
+        Question1.Hint += HintHandler;
     }
-
-    private string DelegateActHandler()
+    public void HintHandler()
     {
-        print("What's your name?");
-        return "George";
-    }
-
-    private void AnotherDelHandler(string s)
-    {
-        print(s);
-    }
-
-    public void ThirdDelHandler()
-    {
-        player.transform.position = new Vector3(0, 10, 0);
+        print("jump on both blocks to fully open door!");
     }
 }

@@ -18,7 +18,7 @@ public class EnemyMove : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Debug.Log("running");
+        
         myCC = GetComponent<CharacterController>();
         movement = new Vector3(speed, 0, 0);
         //StartCoroutine(MoveHandler());
@@ -77,7 +77,8 @@ public class EnemyMove : MonoBehaviour
             movement = new Vector3(-speed, 0, 0);
             if (forward)
             {
-                charArt.Rotate(0, 180, 0);
+                  
+                charArt.Rotate(0, 180, 10);
                 forward = false;
             }
         }

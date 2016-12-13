@@ -7,14 +7,14 @@ public class Door : MonoBehaviour
 
     public int openDoor;
    public Vector3 position;
-    private bool buttonClicked = false;
+
     public GameObject door;
 
   
 
     public void Start()
     {
-       
+        Character.Flying += FlyingHandler;
 
     }
 
@@ -34,7 +34,10 @@ public class Door : MonoBehaviour
         }
     }
 
-        
+        public void FlyingHandler(int flightSpeed)
+    {
+        print("The door is flying" + flightSpeed + " kmh");
+    }
        
 
    
