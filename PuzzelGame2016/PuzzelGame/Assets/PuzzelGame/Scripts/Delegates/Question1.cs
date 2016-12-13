@@ -10,7 +10,7 @@ public class Question1 : MonoBehaviour
 
     void OnTriggerEnter()
     {
-        print("1");
+        
         Hint();
     }
 
