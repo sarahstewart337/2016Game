@@ -78,7 +78,7 @@ public class EnemyMove : MonoBehaviour
             if (forward)
             {
                   
-                charArt.Rotate(0, 180, 10);
+                charArt.Rotate(0, 180, 20);
                 forward = false;
             }
         }

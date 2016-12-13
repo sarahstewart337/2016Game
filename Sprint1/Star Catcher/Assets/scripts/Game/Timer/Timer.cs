@@ -25,7 +25,7 @@ public class Timer : MonoBehaviour
         timeLeft -= Time.deltaTime;
         if (timeLeft < 0)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(2);
         }
 
 
