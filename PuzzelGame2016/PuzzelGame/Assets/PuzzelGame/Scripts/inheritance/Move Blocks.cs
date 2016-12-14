@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fly : MonoBehaviour {
+public class MoveBlocks : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
