@@ -13,8 +13,12 @@ public class Passing : MonoBehaviour
     {
         Speed += SpeedHandler;
 	}
-	
-	public void SpeedHandler(int speed)
+    private void OnTriggerEnter(Collider other)
+    {
+        Speed(speed);
+    }
+
+    public void SpeedHandler(int speed)
     {
         print("the character is running " + speed + "mph");
 

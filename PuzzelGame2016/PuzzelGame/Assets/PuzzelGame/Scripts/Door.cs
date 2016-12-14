@@ -38,12 +38,16 @@ public class Door : MonoBehaviour
     {
         print("The door is flying" + flightSpeed + " kmh");
     }
-       
 
-   
-	//public void MoveDoor()
-   // {
-       
+    public void SpeedHandler(int speed)
+    {
+        print("the door is running " + speed + "mph");
+
+    }
+
+    //public void MoveDoor()
+    // {
+
     //}
 
     public void OnTriggerEnter(Collider other)
