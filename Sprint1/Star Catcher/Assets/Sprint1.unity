@@ -1308,7 +1308,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 120
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!135 &382297389
 SphereCollider:
@@ -2337,7 +2337,7 @@ MonoBehaviour:
   slideTime: 0.01
   audioClip:
   - {fileID: 8300000, guid: a6c7ee3367f5fa54fb9f2f8cf876ceb9, type: 3}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 5575694ccb37ba448a1c70e772aa94bd, type: 3}
 --- !u!143 &684098253
 CharacterController:
   m_ObjectHideFlags: 0
@@ -3152,7 +3152,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1875568302
+  randomSeed: 1752828568
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4148,7 +4148,7 @@ ParticleSystem:
   VelocityModule:
     enabled: 1
     x:
-      scalar: -5.41
+      scalar: -0.2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4187,7 +4187,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     y:
-      scalar: -7.68
+      scalar: -2.53
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4264,7 +4264,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
       minMaxState: 0
-    inWorldSpace: 1
+    inWorldSpace: 0
   InheritVelocityModule:
     enabled: 0
     m_Mode: 0
@@ -4308,9 +4308,9 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
   ForceModule:
-    enabled: 0
+    enabled: 1
     x:
-      scalar: 0
+      scalar: -1.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4349,7 +4349,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     y:
-      scalar: 0
+      scalar: 2.68
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -6362,9 +6362,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 88b4b181ae8c877439dd50815212cbbb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0585f161af1c2bd44a900a0337d59d58, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.25
+  m_Volume: 0.799
   m_Pitch: 1.06
   Loop: 1
   Mute: 0
@@ -7732,7 +7732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wolfRef: {fileID: 382297385}
-  wolfSpawnChance: 100
+  wolfSpawnChance: 10
   cameraPosition: {fileID: 1162184629}
   moveScript: {fileID: 382297386}
   wolfReady: 1
@@ -8397,7 +8397,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -341850311
+  randomSeed: 928451449
   InitialModule:
     serializedVersion: 3
     enabled: 1
