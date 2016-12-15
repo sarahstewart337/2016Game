@@ -213,9 +213,9 @@ Light:
   m_GameObject: {fileID: 1000010257687540}
   m_Enabled: 1
   serializedVersion: 7
-  m_Type: 0
+  m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 8
+  m_Intensity: 0.95
   m_Range: 8.44
   m_SpotAngle: 136.1
   m_CookieSize: 10
