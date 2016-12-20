@@ -13,7 +13,7 @@ public class Boundery1 : MonoBehaviour
     {
 
 
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
       
     }
 	// Use this for initialization
