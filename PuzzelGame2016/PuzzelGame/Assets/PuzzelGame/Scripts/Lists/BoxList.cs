@@ -5,15 +5,14 @@ using UnityEngine;
 
 public class BoxList : MonoBehaviour
 {
-    public List <BoxList> box;
+    public List <int> box = new List<int>();
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
+        box.Add(Random.Range(1, 100));
 		
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }
