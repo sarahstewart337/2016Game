@@ -20,6 +20,13 @@ public class MoveCharater : MonoBehaviour
     //Sliding vars
     public int slideDuration = 100;
     public float slideTime = 0.01f;
+
+    private bool crash = true;
+
+    private AudioSource audio;
+
+    public AudioClip[] audioClip;
+
     //Coroutine for Sliding Character
     IEnumerator Slide ()
     {
@@ -48,6 +55,7 @@ public class MoveCharater : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
+        audio = GetComponent<AudioSource>();
         //This "Finds" the charaacter controller component
         myCC = GetComponent<CharacterController>();
         count = 0;
@@ -86,9 +94,10 @@ public class MoveCharater : MonoBehaviour
             jumpCount = 0;
         }
        
+       
 
         // adding the gravity var to the y position of the tempPos var
-        tempPos.y -= gravity;
+        tempPos.y -= gravity * Time.deltaTime;
         //adding the speed var to the tempPos var x value with the right and left arrow keys
         tempPos.x = Speed*Input.GetAxis("Horizontal");
         //moves the character controller at an even pace
@@ -101,11 +110,34 @@ public class MoveCharater : MonoBehaviour
             Destroy(other.gameObject);
             count = count + 1;
             SetCountCountText();
+            PlaySound(0);
+        }
+
+        if (other.gameObject.CompareTag("crash")&& crash)
+        {
+            count = count / 2;
+            SetCountCountText();
+            crash = false;
+            PlaySound(1);
+        }
+    }
+
+    void PlaySound(int clip)
+    {
+        audio.PlayOneShot(audioClip[clip]);
+    }
+    void OnTriggerExit (Collider other)
+    {
+        if (other.gameObject.CompareTag("crash")&& !crash)
+        {
+            crash = true;
         }
     }
     void SetCountCountText ()
     {
         Score.text = "Score: " + count.ToString();
     }
+
+
 }
 

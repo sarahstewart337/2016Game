@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - star
+  - crash
+  - New Tag
+  - Wolf
   layers:
   - Default
   - TransparentFX
@@ -21,15 +24,15 @@ TagManager:
   - Boundery
   - rocks
   - Stars
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Enemy
+  - spawnEnemy
+  - EnemyJump
+  - untouchable
+  - jump collider
+  - wolfrecycler
+  - wolf recycle trigger
+  - crash
+  - collider
   - 
   - 
   - 
